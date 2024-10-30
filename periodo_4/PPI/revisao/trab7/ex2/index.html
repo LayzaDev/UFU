@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="campos">
+      <div class="divInput">
+        <label for="altura">Altura (cm): </label>
+        <input type="text" name="altura" id="altura">
+      </div>
+      <div>
+        <fieldset>
+          <legend>Sexo</legend>
+          <input type="radio" name="sexo" id="feminino">
+          <label for="feminino">Feminino</label>
+          <input type="radio" name="sexo" id="masculino">
+          <label for="masculino">Masculino</label>
+        </fieldset>
+      </div>
+    </div>
+    <div class="divBtn">
+      <button type="button">Calcular</button>
+    </div>
+    <span></span>
+  </main>
+  
+  <script>
+    const btn = document.querySelector("button");
+
+    btn.onclick = () => {
+      let campoAltura = document.querySelector("input");
+      let altura = parseInt(campoAltura.value);
+      let sexo = document.querySelector('input[name="sexo"]:checked');
+
+      let pesoIdeal = 0;
+
+      if(sexo === "feminino"){
+        pesoIdeal = 52 + (0.67 * (altura - 152.4));
+      } else {
+        pesoIdeal = 52 + (0.75 * (altura - 152.4));
+      }
+
+      let span = document.querySelector("span");
+
+      span.textContent = `Peso ideal: ${pesoIdeal}`;
+    }
+  </script>
+</body>
+</html>

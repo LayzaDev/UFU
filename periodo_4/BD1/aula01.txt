@@ -1,0 +1,56 @@
+AULA 01: Introdução a Sistemas Gerenciadores de Banco de Dados
+
+Banco de Dados (BD)
+
+	• coleção de itens de dados relacionados;
+	• exigem armazenamento persistente de dados.
+==================================================================
+
+Sistema Gerenciador de Banco de Dados (SGBD):
+
+	• conjunto de programas que permite a criação, utilização e manutenção de um banco de dados;
+	• atua como uma camada entre as aplicações e os BD;
+	• toda alteração na estrutura do BD deve passar pelo SGBD;
+	
+	Podemos fazer uma analogia simples com uma empresa:
+
+	• Banco de Dados: almoxarifado;
+	• SGBD: almoxarife.
+		
+	• Se um funcionário precisa de um item, o almoxarife é quem busca.
+	• Se novos itens chegam, o almoxarife é responsável guarda-los e organiza-los.
+	• O almoxarife é o único que conhece todos os detalhes do almoxarifado, demais funcionários não precisam desse conhecimento.
+	• O almoxarife controla qual item cada funcionário pode obter (esquema de autorizações)
+	• Se necessário o almoxarife reorganiza os itens do almoxarifado, não afetando em nada os outros funcionários.
+
+==================================================================		
+		
+Sistema de Banco de dados (SBD)
+
+	• BD + SGBD;
+
+==================================================================		
+
+Armazenamento: BD exige um armazenamento persistente de dados
+	
+	1° opcão
+	
+		• Arquivos
+		• Desvantagem: Qualquer relatório que não tenha sido previsto pelas aplicações iniciais exigirá o desenvolvimento de uma nova aplicação.
+
+	2° opcão
+		
+		• SGBD
+		• Vantagens:
+			- Possui catálogo com metadados que descrevem a estrutura de um BD;
+			- Permite o isolamento entre dados e programas;
+			- Suporte para múltiplas visões de dados;
+			- Compartilhamento de dados e operações entre múltiplos usuários (controle de concorrência)
+			- Facilita o controle de redundância de dados;
+			- Acesso eficiente aos dados;
+			- Ferramentas para backup e recuperação;
+			- Facilidade para lidar com relacionamentos complexos entre dados;
+			- Mecanismos para ajudar a manter integridade dos dados;
+	
+==================================================================
+ 

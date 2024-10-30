@@ -1,0 +1,14 @@
+input, button {
+  padding: 0.3rem;
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+img {
+  display: flex;
+  height: 90vh;
+  box-sizing: border-box;
+}

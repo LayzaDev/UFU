@@ -1,0 +1,173 @@
+/*======== GERAL ========*/
+
+body {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0 16px;
+}
+
+header {
+  padding: 1.9rem;
+  background-color: #773737;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  margin: 5px 0 10px 20px;
+}
+
+p {
+  color: #141414;
+  padding: 0 1.5rem;
+}
+
+nav {
+  padding: 0.4rem;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid #773737;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0.4rem;
+}
+
+nav button {
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  background-color: inherit;
+  color: #5e1111;
+  height: 30px;
+  font-size: 1.2rem;
+}
+
+nav button:hover {
+  color: #c01212;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer {
+  padding: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #060606;
+  background-color: initial;
+}
+
+/*======== GALERIA ========*/
+
+.containerHeader, footer {
+  display: block;
+  box-sizing: border-box;
+}
+
+.containerImage {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 2px #707070;
+  box-sizing: border-box;
+  flex: 1 1 175px;
+}
+
+/*======== LOGIN ========*/
+
+.containerLogin {
+  display: block;
+  max-width: 400px;
+  padding: 2rem;
+  margin: 5rem auto;
+  font-size: 1.1rem;
+  border-radius: 0.3rem;
+  color: #5d5d5d;
+  box-shadow: 0 0 10px #6d6d6d;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.inputs:focus {
+  border: 1px solid #aeacac;
+  box-shadow: 0 0 10px #6d6d6d;
+}
+
+.inputs, button {
+  width: 100%;
+  padding: 0.4rem;
+  margin: 0.5rem 0;
+  font-size: 17px;
+  outline: none;
+  border: 0.5px solid #aeacac;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid rgb(18, 2, 2);
+  color: #fff;
+  background-color: #5e1111;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+/*======== JAVASCRIPT ========*/
+
+button.buttonActive {
+  font-weight: bold;
+  color: #c01212;
+}
+
+.tabs section {
+  display: none;
+}
+
+section.tabActive {
+  display: block;
+}
+
+/*======== MEDIA QUERYS ========*/
+
+@media (max-width: 600px){
+
+  body {
+    width: 95%;
+  }
+
+  .containerLogin {
+    width: 90%;
+    box-sizing: border-box;
+  }
+
+}
+

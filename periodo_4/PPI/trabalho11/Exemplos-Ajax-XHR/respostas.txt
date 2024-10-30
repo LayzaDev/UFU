@@ -1,0 +1,36 @@
+i. Qual foi o código retornado?
+ii. Qual o valor do cabeçalho Content-Type da resposta HTTP? Por quê?
+iii. Qual o valor recebido no corpo da resposta HTTP (aba response)?
+iv. Qual o valor do cabeçalho Server da resposta HTTP?
+v. A requisição HTTP possui o cabeçalho Content-Type? Por quê?
+
+>>> CEP = 38400-100
+
+i. 200
+ii. text/html; charset=UTF-8
+iii. Uberlândia
+iv. nginx
+v. Sim, pois na função header do php define o content-type da resposta http, uma vez que será retornado um conteúdo no formato JSON.
+
+
+>>> CEP = 38400-500
+
+i. 200
+ii. text/html;
+iii. This site requires Javascript to work, please enable Javascript in your browser or use a browser with Javascript support
+iv. nginx
+v. Sim, pois na função header do php define o content-type da resposta http, uma vez que será retornado um conteúdo no formato JSON.
+
+>>> codigo php com erro
+
+i. 500 Internal Server Error
+iii. Não obtivemos resposta
+
+>>> display error -> on
+
+i. O status retornado e a resposta do corpo
+ii. 200
+iii. Parse error: syntax error, unexpected token "echo" in /home/vol10_2/infinityfree.com/if0_35771771/htdocs/trabalho11/Exemplos-Ajax-XHR/Ex2-busca-cidade/busca-cidade.php on line 7
+iv. Em situações em que há algum erro no código de algum dos arquivos.
+v. 
+

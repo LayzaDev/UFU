@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Teste AJAX Simples</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.5rem;
+      background-image: url("images/bg2.jpg");
+      background-size: cover;
+      margin: 0;
+    }
+
+    main {
+      width: 60%;
+      background-color: #fff;
+      border: 0.5px solid #ccc;
+      margin: 0;
+      padding: 2% 4%;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+    <h1>Faculdade de Computação da UFU</h1>
+    <p>A Faculdade de Computação (FACOM) da Universidade...</p>
+    <p>No início dos anos 2000 foi criado na Faculdade...</p>
+    <button>Clique para carregar mais conteúdo com Ajax</button>
+  </main>
+
+  <script>
+    function loadExtraContent() {
+      let xhr = new XMLHttpRequest(); // Criação do objeto XMLHttpRequest para iniciar requisição Ajax
+      xhr.open("GET", "conteudoAdicional.html", true); // método open() configura a requisição
+      // 1° "GET" indica o método HTTP que utilizaremos
+      // 2° "conteudoAdicional.html" indica o endereço no servidor do recurso sendo solicitado.
+      // 3° "true" indica se a requisição será realizada de forma assincrona(true) ou sincrona(false)
+      xhr.onload = function () { // onload() permite indicar uma função callback que será chamada quando a resposta enviada pelo servidor for completamente carregada pelo navegador.
+        const main = document.querySelector("main"); // selecionando a tag main do arquivo index.html
+        main.insertAdjacentHTML("beforeend", xhr.responseText); // inserindo o conteúdo obtido pela requisição na tag main
+      };
+      xhr.send(); // Envia a requisição http
+    }
+    const button = document.querySelector("button"); // selecionando o button do html
+    button.addEventListener("click", loadExtraContent); // adicionando um evento de click no button, ou seja, quando o button for clicado, a função loadExtraContent será chamada
+  </script>
+  
+</body>
+
+</html>

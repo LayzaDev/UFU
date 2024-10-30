@@ -1,0 +1,41 @@
+main {
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  box-shadow: 0px 0px 10px #817f7f; 
+  background-color: #e5e4e4;
+  box-sizing: border-box;
+}
+
+label {
+  font-size: 18px;
+}
+
+input {
+  padding: 0.5rem;
+  width: 200px;
+}
+
+li {
+  width: 200px;
+  background-color: #9b9bc1;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+span {
+  margin-left: 20px;
+}
+
+button {
+  border: none;
+  float: right;
+  font-size: 1rem;
+  cursor: pointer;
+  color: red;
+  background-color: #9b9bc1;
+}

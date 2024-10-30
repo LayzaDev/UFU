@@ -1,0 +1,28 @@
+PROVA  2 BD1 
+
+TUPLAS FALSAS
+
+Tuplas falsas são linhas duplicadas ou redundantes em um tabela, ocorrem quando por exemplo, tentamos fazer a listagem de duas tabelas com a clausula FROM sem impor um relacionamento entre essas tabelas, isso fará com que seja feito um produto cartesiano entre as duas tabelas, criando pares falsos como resultado. Uma forma de elimina-las é impondo o relacionamento entre elas, usando a chave primária de uma e a estrangeira da outra tabela.
+	
+JUNÇÃO INTERNA x JUNÇÃO EXTERNA
+  
+ - Junção Interna: retorna apenas as linhas que têm correspondências.
+ - Junção Externa: retorna todas as linhas de uma ou de ambas as tabelas, preenchendo com nulos quando não há correspondência.
+  
+Porque um cliente pode não ser contabilizado ao usar a junção interna? 
+
+Ao usar a junção interna, apenas as linhas de uma das tabelas que tem relação na outra foram levadas em conta. Quando um cliente não tem emprestimo (por exemplo), ele não aparecerá no resultado. Mas se quisermos também considerar os clientes sem emprestimo, podemos usar a junção externa.
+	
+listar o nome de cada cliente, e do cliente que o indicou já fizemos esse exemplo com junção da tabela cliente com ela mesma
+agora faremos com uma subconsulta aninhada.
+
+O que é uma visão (VIEW)?
+
+No contexto de Sql, uma visão (VIEW) é uma tabela derivada de outras tabelas. Essas outras tabelas podem ser tabelas físicas da base de dados ou outras visões. Visões são denominadas também como tabelas virtuais, pois não necessariamente são armazenadas em forma física no banco de dados, ao contrário das tabelas da base.
+
+O SGBD se compromete a manter as visões sempre atualizadas, isto é, se as tabelas que deram origem à uma visão sofrerem alterações, as visões devem imediatamente refletir as alterações.
+
+Em geral, pode-se fazer qualquer consulta com SELECT sobre uma visão (view), como em qualquer outra tabela. No entanto, operações que envolvem alteração de dados como INSERT, UPDATE e DELETE geralmente não são aceitas sobre as visões.
+
+Visões costumam ser utilziadas quando é preciso refrenciar, com certa frequência, tabelas construídas com consultas que exigem algum nível de complexidade.
+

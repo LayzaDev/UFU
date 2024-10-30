@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Clinica ABC Health</h1>
+  </header>
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="galeria.html">Galeria</a>
+      </li>
+      <li>
+        <a href="cadastro.html">Login</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <form action="#">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email">
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" id="cpf">
+        <label for="idade">Idade</label>
+        <input type="text" name="idade" id="idade">
+        <label for="telefone">Telefone</label>
+        <input type="tel" name="telefone" id="telefone">
+        <label for="dt_nasc">Data de Nascimento</label>
+        <input type="text" name="dt_nasc" id="dt_nasc">
+        <fieldset>
+          <legend>Sexo</legend>
+          <input type="radio" name="feminino" id="feminino" required>
+          <label for="feminino">F</label>
+          <input type="radio" name="masculino" id="masculino" required>
+          <label for="masculino">M</label>
+        </fieldset>
+        <label for="estado_civil">Estado Civil</label>
+        <select name="estado_civil" id="estado_civil" required>
+          <option value="">Selecione</option>
+          <option value="solteiro">Solteiro</option>
+          <option value="casado">Casado</option>
+          <option value="amasiado">Amasiado</option>
+          <option value="viuvo">Viuvo</option>
+        </select>
+        <input type="text" name="" id="">
+        <label for=""></label>
+        <input type="text" name="" id="">
+      </fieldset>
+      <fieldset>
+        <legend>Endereco</legend>
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" id="cep" required>
+        <label for="tipo_log">Tipo Logradouro</label>
+        <input type="text" name="tipo_log" id="tipo_log" required>
+        <label for="bairro">Bairro</label>
+        <input type="text" name="bairro" id="bairro" required>
+        <label for="cidade">Cidade</label>
+        <input type="text" name="cidade" id="cidade" required>
+        <label for="estado">Estado</label>
+        <input type="text" name="estado" id="estado" required>
+      </fieldset> 
+      <fieldset>
+        <legend>Informações adicionais</legend>
+        <label for="interesses">Interesses</label>
+        <input type="checkbox" name="interesses" id="interesses">
+        <label for=""></label>
+        <input type="checkbox" name="" id="">
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    <address>
+      <p>Av. João Naves de Ávila, Santa Monica, Uberlandia</p>
+    </address>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,163 @@
+body {
+  background-color: rgb(224, 227, 227);
+  font-family: 'Times New Roman', Times, serif; 
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  padding: 1.40em;
+  background-color: #303232;
+  color: #ffff;
+}
+
+header h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 35px;
+  text-align: center;
+  margin: 0;
+}
+
+nav {
+  background-color: #9d9b9b;
+  padding: 0.5em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: #800080;
+}
+
+a:active {
+  color: #520d52;
+}
+
+:is(article, fieldset) :is(h2, legend, p, label) {
+  color: #303232;
+}
+
+h2:has(+ p) {
+  font-size: 25px;
+  color: #303232;
+}
+
+#alterando:first-of-type {
+  color:#546f8c;
+}
+
+h2, p {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+h2 + p {
+  color: #800080;
+}
+
+h2 ~ p {
+  font-size: 18px;
+}
+
+table {
+  margin: 0 auto;
+  padding: 5px;
+}
+
+img:first-child{
+  width: 180px;
+  height: 180px;
+  border: 1px solid #303232;
+  margin: 8px;
+}
+
+form {
+  width: 750px;
+  margin: 0 auto;
+}
+
+.subtitle_galery {
+  margin-left: 290px;
+}
+
+label {
+  font-size: 17px;
+}
+
+.spans {
+  margin-right: 30px;
+}
+
+.inputs, .selects {
+  border: 1px solid #303232;
+  padding: 3px;
+  margin: 5px 3px;
+}
+
+input:valid {
+  border: 1px solid #0caf0c;
+}
+
+input:invalid + span::after {
+  content: 'X';
+  color: red;
+}
+
+input:valid + span::after {
+  content: '✓';
+  color: #0caf0c;
+}
+
+fieldset {
+  width: 700px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.fieldset_radios, #fieldset_checkbox, #fieldset_textArea {
+  width: 260px;
+}
+
+#complemento {
+  width: 500px;
+}
+
+#arquivo {
+  border: none;
+}
+
+button {
+  background-color: #303232;
+  color: #ffff;
+  padding: 10px;
+  width: 100px;
+  margin-left: 340px;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #303232;
+  color: #ffff;
+  padding: 10px;
+  text-align: center;
+}

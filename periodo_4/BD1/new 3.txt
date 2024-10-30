@@ -1,0 +1,243 @@
+============================ Introdução a Sistemas Gerenciadores de Banco de Dados ============================
+
+																	MATÉRIA PARA ESTUDAR PARA PROVA 
+
+BANCO DE DADOS
+	
+- Armazenamento Persistente (arquivo)
+
+===========================================================
+
+VANTAGENS DO USO DE SGBD's
+
+• O SGBD possui um catálogo com metadados que descrevem a
+estrutura do banco de dados; (METADADOS: dados sobre dados)
+
+• Permite o isolamento entre dados e programas (DADOS DE UM LADO PROGRAMAS DE OUTRO):
+	
+• Suporte para múltiplas visões de dados
+
+• Compartilhamento de dados e operações entre múltiplos usuários (controle de concorrência)
+
+• Facilita o controle de redundância dos dados;
+
+• Acesso eficiente aos dados;
+
+• Ferramentas para backup e recuperação;
+
+• Facilidade para lidar com relacionamentos complexos entre dados;
+
+• Mecanismos para ajudar a manter integridade dos dados.
+
+===========================================================
+
+MODELO DE DADOS
+
+São divididos em 3 categorias
+
+	•  Conceitual (alto nível): 
+		- visão geral, para leigos
+		- próximo a linguagem humana
+		- fácil entendimento
+		- utilizado para compreenção geral de sistemas
+		- ex: modelo Entidade-Relacionamento
+		
+	• Representativo (intermediario):
+		- ainda pode ser entendido por pessoas em geral, porém possui detalhes de armazenamento e organização de dados
+		- utilizados com frequencia nos SGBDs
+		- ex: Modelo Relacional
+		
+	• Físico (baixo nível):
+		- descrevem o armazenamento dos dados em detalhes.
+		- destinados a especialistas
+		- não muito utilizado, SGBD cuida dessa parte
+		
+Arquitetura de 3 níveis (esquemas)	
+	
+	• Nível Externo:
+		-  descreve visões do usuário. Cada visão especifíca o que um grupo de usuarios pode ver
+		- usuario final
+	• Nível Conceitual:
+		- descreve a estrutura do BD para os usuários (modelo representativo)
+	• Nível Interno:
+		- descreve todos os detalhes de armazenamento (modelo fisico)
+
+===========================================================
+
+RELACIONAMENTOS
+
+Três principais tipos de relacionamento
+
+	• Um para um (ou ZERO)
+		ex1: um departamento tem um gerente, e cada gerente só gerencia um departamento.
+		ex2: cada pessoa possui um único RG, e cada número de RG está associado a apenas uma pessoa.
+		ex3: cada endereço pode ter apenas um proprietário, e cada proprietário é associado a apenas um endereço.
+		
+	• Um para muitos
+		ex1: um departamento tem vários funcionários, e cada funcionário só trabalha para um departamento
+		ex2: um cliente pode fazer vários pedidos, mas cada pedido pertence a apenas um cliente.
+		ex3: uma categoria de produtos pode conter vários produtos, mas cada produto pertence a apenas uma categoria.
+		
+	• Muitos para muitos
+		ex1: um funcionário atua em vários projetos, e cada projeto é conduzido por vários funcionários.
+		ex2: um aluno pode ter várias disciplinas e uma disciplina pode ter vários alunos.
+		ex3: um cliente pode comprar vários produtos e um produto pode ser comprado por vários clientes.
+
+===========================================================
+
+CHAVE CANDITADA 
+
+	• O que é a chave candidata?
+		- São candidatas a se tornar uma chave primaria, ou seja, possuem valores unicos para cada registro 
+		e todo representante da entidade deve possuir, além de não poder conter valores nulos.
+		
+	• Podem ser divididas em duas categorias:
+		- chave candidata simples: Departamento -> Sigla
+		- chave candidata composta: Cidade -> Municipio e Estado (atuam em conjunto) 
+
+CHAVE PRIMARIA
+
+	• O que é a chave primaria?
+		- Chave candidata escolhida para representar uma entidade
+		- São importantes para economizar, abreviar, anotando apenas a chave primaria de identificação.
+
+CHAVE ESTRANGEIRA
+
+	• O que é a chave estrangeira?
+		- Referencia instancia de outras entidade
+		- Carrega o valor de uma chave primaria que vem de outra entidade (tabela).
+
+	• Quando aparecem as chaves estrangeiras?
+		- Quando se tem um relacionamento entre duas entidades
+
+	• Como saber para onde a chave estrangeira irá?
+		- A chave estrangeira sempre vai estar no lado "n"
+
+	• Diferença entre chave primaria e estrangeira?
+		- Primary Key: identifica de maneira única cada registro de uma tabela específica, importante para indexar
+							   e acessar rapidamente os registros de uma tabela
+		- Foreign Key: faz referência à chave primária de outra tabela, estabelecendo uma relação entre elas, 
+		permitindo que uma tabela referêncie os registros de outra.
+		
+	• Onde colocar a chave primaria e a estrangeira?
+		- A PK é especificada no momento da criação da tabela para identificar de forma única cada registro dessa Entidade.
+		- A FK é especificada quando há uma relação entre duas tabelas, geralmente é difinida na tabela que está referenciando a PK de outra tabela.
+
+
+===========================================================
+ATRIBUTOS
+
+	• Monovalorado: 
+		- só pode possuir um único valor para cada representante da entidade.
+		- ex: Nome, RG
+		
+	• Multivalorado:
+		- representa um conjunto de valores para cada entidade
+		- ex: telefone, email
+		
+	• Armazenado:
+		- fisicamente armazenado no banco de dados
+		- ex: data de nascimento
+		
+	• Derivado:
+		- valor pode ser obtido a partir dos valores de outros atributos
+		- ex: Idade pode ser calculada a partir da data de nascimento
+		
+===========================================================
+
+MODELO RELACIONAL
+
+	• Limitações
+		- todo atributo deve ser monovalorado
+		- Apenas entidades podem possuir atributos (não há atributos de relacionamento)
+		- Cada relacionamento envolve, no máximo, duas entidades (relações) distintas
+		- Apenas relacionamentos 1 <-> 1 e 1 -> N são permitidos
+		- Relacionamentos N <-> N precisam ser decompostos em relacionamentos 1 -> N
+		- Baseado em tabelas bidimensionais (linha e coluna)
+		
+	• Restrições
+		- Nenhum valor de chave primaria pode estar vazio
+		- cada instancia da relação possui um valor de chave primaria diferente de todas as outras que existem ou já existiram no BD
+		- Cada chave estrangeira deve possuir um valor que de fato seja chave primaria de outra relação
+		- Cada valor deve estar no dominio de seu respectivo atributo
+		- Atributos marcados como NOT NULL não podem estar vazios em nenhuma de suas instancias
+
+===========================================================
+
+TIPOS DE DADOS BÁSICOS EM SQL	
+	
+	• CHAR(n) ou CHARACTER(n): 
+		- cadeias fixas de n caracteres.
+		- vantagem: Previsibilidade (facilidade em percorrer os itens), otimização das operações (rapidez)
+		- desvantagem: preenche espaços que sobram com espaço, uso de memória desnecessário
+		
+	• VARCHAR(n) ou CHARACTER VARYING(n):
+		- cadeias de tamanho variavel de até n caracteres.
+		- vantagem: não usa espaços adicionais, otimização da memória
+		
+===========================================================
+		
+LINGUAGEM DE DEFINICAO DE DADOS (DDL)
+
+	• Atraves de uma DDL, podemos especificar o esquema geral de um modelo de dados
+	• Opera no Banco de Dados, criando tabelas, alterando e removendo
+	• São os comandos que interagem com os objetos do banco (tabelas, esquemas, visões, etc)
+	
+	• Principais cláusulas de definição de dados são:
+		- CREATE <elemento>: criar um elemento, que pode ser um esquema, tabela, visão, etc.
+		- ALTER <elemento>: altera as propriedades de um elemento existente
+		- DROP <elemento>: remove um elemento existente
+
+LINGUAGEM DE MANIPULAÇÃO DE DADOS (DML)
+	
+	• Atraves de uma DML, é possível inserir, alterar e remover informações em um banco de dados.
+	• Opera nas linhas de uma tabela, inserindo linha, alterando ou removendo.
+	• São os comandos que interagem com os dados dentro das tabelas (linhas das tabelas)
+
+	• As principais cláusulas DML na SQL são:
+		- INSERT: insere linhas em uma tabela;
+		- DELETE: remove linhas de uma tabela;
+		- UPDATE: atualiza (altera) linhas em uma tabela;
+
+===========================================================
+
+PROPRIEDADES ACID
+
+	• ATOMICIDADE
+		- Algo que não pode ser quebrado, ou executa sem erro ou não executa nada (0 ou 80)
+		- Em caso de erro, o banco deve ser restaurado para o estado anterior da linha de erro 
+	
+	• CONSISTENCIA
+		- Se a operação for executada do inicio ao fim, deve levar o BD de um estado consistente até outro estado consistente.
+		- Se o BD atender a todas as restrições definidas no esquema e no BD em geral é considerado consistente.
+	
+	• ISOLAMENTO
+		- As operações devem ser encaradas como se fossem executadas isoladamente de outras operações, mesmo que sejam
+		  executadas simultaneamente, não devem interferir uma na outra.
+	
+	• DURABILIDADE (permanencia)
+		- Se uma mudança é feita por uma operação, não devem ser perdidas em casos de falhas, devem persistir no BD.
+		
+===========================================================
+
+INSERINDO LINHAS EM UMA TABELA
+
+	CREATE TABLE Pessoa (
+		id INT,
+		nome CHAR(200) NOT NULL,
+		dt_nasc DATE NULL,
+		sexo CHAR(1), DEFAULT " I ",
+		PRIMARY KEY(id)
+	);
+	
+	INSERT INTO Pessoa VALUES
+		(1, "Layza", "2003-03-12", "F"),
+		(2, "Emanuel", "2002-05-21", "M"),
+		(3, "Yasmin", "2005-02-08", "F");
+		
+	OU 
+	
+	INSERT INTO Pessoa (id, nome, dt_nasc, sexo) VALUES
+		(1, "Layza", "2003-03-12", "F"),
+		(2, "Emanuel", "2002-05-21", "M"),
+		(3, "Yasmin", "2005-02-08", "F");

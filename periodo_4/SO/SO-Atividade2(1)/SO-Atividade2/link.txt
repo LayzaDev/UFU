@@ -1,0 +1,43 @@
+Link do video do tema 7
+https://eduplay.rnp.br/trabalhotema7
+
+
+Agora eu tenho as seguintes tabelas no meu banco de dados sql: 
+
+Tabela Cliente
+ - numCliente (PK)
+ - nome
+ - endereco
+ - foneres
+ - fonecel
+ - numClienteIndicador
+ 
+Tabela Emprestimo
+ 
+ - NumFilme (FK)
+ - Numero (PK)
+ - tipo (PK)
+ - cliente (FK)
+ - valor_pg
+ - dataretirada
+ - datadevolucao
+ 
+Tabela Midia
+ - numFilme (FK)
+ - numero (FK)
+ - tipo (FK)
+ 
+ Tabela Filme
+ - numFilme (PK)
+ - titulo_original
+ - titulo_pt
+ - duracao
+ - dataLancamento
+ - direcao
+ - categoria
+ - classificacao (FK)
+ 
+Preciso fazer a seguinte consulta sql: Obter uma listagem com nomes de TODOS os clientes e os títulos em português dos filmes alugados por cada um
+ Como eu poderia implementar essa consulta?
+
+

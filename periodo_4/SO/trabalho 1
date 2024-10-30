@@ -1,0 +1,39 @@
+PARTE 1
+
+1. Execute o comando who. Que informações são apresentadas com o
+comando who?
+
+- Imprime informações sobre usuários que estão logados no momento.
+- Nome do usuario conectado, tty (terminal), data e hora de acesso
+
+2. ls -> lista os arquivos do diretório. 
+   ls -l -> listagem detalhada.
+   ls -l diretório -> Para listar um diretório qualquer
+  
+b) Informações apresentadas com o comando "ls -l home/layza
+
+- Permissões
+- Links
+- Proprietario
+- Grupo
+- Tamanho
+- Data e hora
+- Nome do arquivo ou diretório
+
+3. df - relata o uso de espaço em disco do sistema de arquivos
+
+1.4 cat <arquivo>
+
+b) cat cpuinfo -> informações da RAM
+nome: Intel(R) Core(TM) i3-1005G1 CPU @ 1.20GHz
+velocidade da CPU em Mhz: 1964.242
+tamanho da cache de sua máquina: 4096 KB
+
+c) cat filesystems
+- sysfs
+- tmpfs
+- proc
+
+1.5 Que comando devo usar para mudar o diretório em um nível?
+cd <diretorio>
+

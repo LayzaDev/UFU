@@ -1,0 +1,19 @@
+%Implementação em prolog
+
+% Caso base: Fatorial de 0 é 1
+fatorial(0, 1) :-!% fatorial(Numero, Fatorial)
+
+fatorial(N, F) :-
+    %Condição do passo: N é maior que 0
+    N > 0,
+    %Simplificando problema: Reduz a instância e armazena em M (se N = 5, armazena 4 em M)
+    M is N - 1,
+    %Obtem a solução de instancia menor, chamando a função fatorial dentro dela mesma
+    fatorial(M, R),
+    %Constrói solução final: F recebe o resultado final de todas as multiplicações
+    F is N * R,
+    %Resultados de todas as instâncias
+    write("N = "), write(N), write(" Fat = "), writeln(F).
+
+fatorial(N) % reduçaõ de predicado
+     :- fatorial(N, F), write("Fat = "), writeln(F).

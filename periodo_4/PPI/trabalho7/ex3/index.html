@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PESO IDEAL</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Descubra seu peso ideal</h1>
+  </header>
+
+  <form>
+    <div>
+      <label for="heightField">Informe sua altura: </label>
+      <input type="text" name="heightField" id="heightField" placeholder="cm">
+    </div>
+    <fieldset>
+      <legend>Sexo:</legend>
+      <div>
+        <input type="radio" name="sexField" id="sexM" value="F">
+        <label for="sexM">Feminino</label>
+      </div>
+      <div>
+        <input type="radio" name="sexField" id="sexF" value="M">
+        <label for="sexF">Masculino</label>
+      </div>
+    </fieldset>
+    
+    <button type="button">Enviar</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Clínica ABC Health se preocupa com sua saúde e por isso oferecemos serviços de... ">
+    <title>Clínica ABC Health</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1>Clínica ABC Health</h1>
+      </header>
+    </section>
+    <nav>
+      <ul>
+        <li>
+          <button data-tabname="home" >Home</button>
+        </li>
+        <li>
+          <button data-tabname="galeria" >Galeria</button>
+        </li>
+        <li>
+          <button data-tabname="login" >Login</button>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section class="tabs">
+        <section data-tabname="home">
+          
+            <h2 id="subtitleIndex">Bem vindo à Clínica ABC Health</h2>
+            <p id="alterando">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae numquam quibusdam, quas recusandae, porro perferendis enim ex sunt ipsum distinctio excepturi tempora eveniet ea impedit ratione.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, ex. Dolorum corrupti voluptates saepe! Consequuntur delectus quasi alias incidunt autem nobis. A id accusantium tempore magnam, dolorum maxime.
+            </p>
+          
+            <h2>Nossa Missão</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio excepturi itaque, quos repellendus amet, exercitationem quas corporis, laudantium nam totam ad nisi facilis maxime..
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aliquam dolore aspernatur enim praesentium quidem soluta, eligendi est odit a possimus facilis tempore possimus facilis.</p>
+          
+            <h2>Nossos Valores</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempora ut odit delectus rerum sapiente ipsum voluptatibus odit a possimus facilis tempore  voluptatum repellendus animisit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempora ut odit delectus rerum sapiente ipsum voluptatibus.Quis doloremque provident voluptatum repellendus animisit consectetur adipisicing.</p>
+          
+        </section>
+        <section data-tabname="galeria">
+          <h2 class="subtitleGalery">Nossa Estrutura</h2>
+          <div class="containerImage">
+            <img src="images/foto1.jpg" alt="recepcao">
+            <img src="images/foto2.jpg" alt="recepcao">
+            <img src="images/foto3.jpg" alt="recepcao">
+            <img src="images/foto6.jpeg" alt="recepcao">
+            <img src="images/foto8.jpg" alt="recepcao">
+            <img src="images/foto7.jpg" alt="recepcao">   
+            <img src="images/foto6.jpeg" alt="recepcao">
+            <img src="images/foto8.jpg" alt="recepcao">  
+          </div>  
+        </section>
+        <section  data-tabname="login"> 
+          <form action="login.php" method="post" class="containerLogin">
+            <div>
+              <label for="user">Usuário:</label>
+              <input type="email" name="user" id="user" class="inputs" placeholder="user@gmail.com" required>
+            </div>
+            <div>
+              <label for="password">Senha:</label>
+              <input type="password" name="password" id="password" class="inputs" placeholder="*********" required>
+            </div>
+            <input type="hidden" name="hidden" value="hidden">
+            <button>
+              <span class="material-symbols-outlined">
+              login</span>
+              <span class="spanText">Login</span>
+            </button>
+          </form>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <address>
+        Av. João Naves de Ávila, Santa Mônica, Uberlândia
+      </address>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

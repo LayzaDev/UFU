@@ -1,0 +1,53 @@
+#containerHeader, footer {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  box-sizing: border-box;
+}
+
+#titleGalery {
+  background-color: #525252;
+  margin: 1.5rem 0 0.4rem;
+  border-radius: 0.5rem;
+}
+
+#titleGalery h1 {
+  color: #fff
+}
+
+nav {
+  border-radius: 0.5rem;
+  position: sticky;
+  top: 0;
+}
+
+#mainGalery {
+  border-radius: 0.5rem;
+  margin-top: 0;
+}
+
+#subtitle_galery {
+  padding: 1.6rem 1.5rem 0;
+  margin-top: 5px;
+}
+
+table {
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+}
+
+img:first-child{
+  width: 9rem;
+  height: 9rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  box-shadow: 2px 2px 2px #707070;
+  box-sizing: border-box;
+}
+
+footer {  
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #525252;
+  color: #f7f5f5;
+}

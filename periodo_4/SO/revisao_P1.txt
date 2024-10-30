@@ -1,0 +1,132 @@
+SISTEMAS OPERACIONAIS
+Gerações de Sistemas Operacionais:
+
+    1ª Geração: Relés mecânicos e tubos de válvulas.
+    2ª Geração: Transistores e sistema em lote/batch.
+    3ª Geração: Circuitos Integrados (CI) e Multiprogramação.
+    4ª Geração: Computadores pessoais.
+    5ª Geração: Dispositivos móveis.
+
+Funções do Sistema Operacional (SO):
+
+    Alocador de recursos, controle de programas, gerenciamento de hardware e execução de programas de usuário.
+
+Serviços do SO:
+
+    Executa no modo kernel (supervisor) e fornece serviços ao usuário.
+
+Vantagem do Interpretador:
+
+    Não precisa ser modificado para novos comandos no SO.
+
+System Call (Chamada de Sistema):
+
+    Fornece uma interface para os serviços disponíveis em um SO.
+
+Passagem de Parâmetros para o SO:
+
+    Simples (registradores), Pilha, Java.
+
+Estrutura do SO:
+
+    Espaço Monolítico: MS-DOS, escrito para proporcionar máxima funcionalidade em uma única camada.
+    Em Camadas: SO dividido em camadas, cada uma construída sobre a camada inferior (ex: Windows NT).
+    MicroKernel: Remove componentes não essenciais do kernel, comunicação por troca de mensagens (ex: Win32).
+    Modular: Técnicas de OO, componentes separados carregados conforme necessário, kernel com conjunto de componentes (ex: Solaris, Linux).
+    Híbrida: Abordagem em camadas com uma camada microkernel (ex: macOS).
+
+Monitoramento de um SO:
+
+    Windows Task Manager, top, htop, ps.
+
+PROCESSOS
+Conceito de Processo:
+
+    Abstração que representa um programa em execução.
+    Entidade ativa com processadores e registradores para executar funções.
+
+Estrutura de um Processo:
+
+    Stack: Variáveis locais e endereço de retorno.
+    Heap: Alocação dinâmica.
+    Data: Variáveis globais.
+    Text: Código do programa.
+
+Estado de um Processo:
+
+    Novo, Execução, Pronto, Bloqueado, Encerrado.
+
+Bloco de Controle de Processo (BCP):
+
+    Representa um processo no SO.
+    Armazena informações sobre a execução do processo.
+
+Troca de Processos na CPU:
+
+    Estado corrente, PID, PPID, prioridade, ponteiros para regiões de memória, conteúdo dos registradores do processador.
+
+Escalonamento de Processos:
+
+    FCFS (First-Come, First-Served): Não preemptivo, primeiro a chegar é o primeiro a ser servido.
+    SJF (Shortest Job First): Preemptivo, escolhe o processo com menor tempo de CPU.
+    Round-Robin (RR): Cada processo recebe uma fatia de tempo (quantum).
+    Prioridade: Processo com maior prioridade é escolhido.
+
+Criação de Processos (UNIX):
+
+    fork(): Cria um novo processo e BCP, cópia da memória do pai, recursos de E/S compartilhados.
+    exec(): Busca e carrega um programa da memória.
+    wait(): Suspende execução do pai até o filho terminar.
+    exit(): Encerra o processo, retorna recursos ao kernel.
+
+Cooperação entre Processos:
+
+    Compartilhamento de informações, agilidade de computação, modularidade, conveniência.
+
+Comunicação entre Processos:
+
+    Memória compartilhada, passagem de mensagens.
+
+ESCALONAMENTO
+Importância na Seleção do Algoritmo de Escalonamento:
+
+    Programa I/O-bound: Muitos bursts de CPU curtos.
+    Programa CPU-bound: Alguns bursts de CPU longos.
+
+Algoritmos de Escalonamento:
+
+    FCFS: Processo que solicita a CPU primeiro é o primeiro a recebê-la (não preemptivo).
+    SJF: A CPU atribui o processo com o próximo menor tempo de retorno (preemptivo).
+    Round-Robin (RR): Cada processo recebe um quantum de tempo.
+    Prioridade: Associa uma prioridade a cada processo.
+
+Escalonamento em Sistema Interativo:
+
+    Filas Múltiplas: Divide a fila de processos prontos em várias filas.
+    Filas Múltiplas com Realimentação: Permite que um processo se mova entre as filas.
+    Loteria (Lottery): Cada processo recebe tickets para execução.
+
+THREADS
+
+    Um processo pode consistir de vários threads, cada um executado de forma separada.
+    Múltiplos threads podem ser associados a um processo, compartilhando código, dados e recursos do SO.
+
+Estados de Threads:
+
+    Nova, Bloqueada, Desbloqueada, Finalizada.
+
+Threads a Nível de Usuário (ULTs):
+
+    Operações de gerenciamento realizadas pela aplicação, sem intervenção do SO.
+    Processo inteiro é bloqueado se uma thread realizar uma chamada bloqueante.
+
+Threads a Nível de Kernel (KLTs):
+
+    SO gerencia diretamente as threads.
+    Processo não é bloqueado se uma thread realizar uma chamada bloqueante.
+
+Modelos de Multithreading:
+
+    Muitos-para-Um: Mapeia muitos threads de usuário em uma thread de kernel.
+    Um-para-Um: Mapeia cada thread de usuário em uma thread de kernel.
+    Muitos-para-Muitos: Mapeia múltiplos threads de usuário em um número menor ou igual de threads de kernel.

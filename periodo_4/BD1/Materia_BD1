@@ -1,0 +1,110 @@
+Introdução a Sistemas Gerenciadores de Banco de Dados
+
+========================================================================
+    
+-------------- MATÉRIA PARA ESTUDAR PARA PROVA --------------
+
+BANCO DE DADOS
+	
+- Armazenamento Persistente (arquivo)
+
+===========================================================
+
+VANTAGENS DO USO DE SGBD's
+
+• O SGBD possui um catálogo com metadados que descrevem a
+estrutura do banco de dados; (METADADOS: dados sobre dados)
+
+• Permite o isolamento entre dados e programas (DADOS DE UM LADO PROGRAMAS DE OUTRO):
+	
+• Suporte para múltiplas visões de dados
+
+• Compartilhamento de dados e operações entre múltiplos usuá-
+rios (controle de concorrência)
+
+• Facilita o controle de redundância dos dados;
+
+• Acesso eficiente aos dados;
+
+• Ferramentas para backup e recuperação;
+
+• Facilidade para lidar com relacionamentos complexos entre
+dados;
+
+• Mecanismos para ajudar a manter integridade dos dados.
+
+===========================================================
+
+DEFINIÇÕES DE MODELOS DE DADOS
+
+• Um para um
+• Um para muitos
+• Muitos para muitos
+
+CHAVE CANDITADA 
+
+• O que é a chave candidata?
+
+- chave candidata simples: Departamento -> Sigla, Nome
+- chave candidata composta: Cidade -> Municipio e Estado (atuam em conjunto) 
+
+CHAVE PRIMARIA
+
+• O que é a chave primaria?
+
+- São importantes para economizar, abreviar, anotando apenas a chave primaria de identificação.
+
+CHAVE ESTRANGEIRA
+
+• O que é a chave estrangeira?
+
+- Carrega o valor de uma chave primaria que vem de outra entidade (tabela).
+
+• Quando aparecem as chaves estrangeiras?
+
+- Quando tem um relacionamento entre duas entidades, vai aparecer a FK em uma das duas entidades.
+
+• Como saber para onde a chave estrangeira irá?
+	- A chave estrangeira sempre vai estar no lado "n"
+
+• Diferença entre chave primaria e estrangeira?
+	- Primary Key: identifica de maneira única cada registro de uma tabela específica, importante para indexar e acessar rapidamente os registros de uma tabela
+	- Foreign Key: faz referência à chave primária de outra tabela, estabelecendo uma relação entre duas tabelas, permitindo que uma tabela referêncie os registros de outra.
+	
+• Onde colocar a chave primaria e a estrangeira?
+	- A PK é especificada no momento da criação da tabela para identificar de forma única cada registro nessa tabela.
+	- A FK é especificada quando há uma relação entre duas tabelas, geralmente é difinida na tabela que está referenciando a PK de outra tabela.
+
+===========================================================
+
+TIPOS DE DADOS SQL
+
+Cadeia Variavel -> Otimização da memória
+
+Cadeia Fixa -> Previsibilidade (facilidade em percorrer os itens), otimização das operações (rapidez)
+
+Boolean -> 3 valores (verdadeiro, falso, desconhecido (campo em branco, nulo))
+
+==== PROVA ====
+
+X  F  X and Y   X or Y  X xor Y
+f  f     f        f 
+f  v     f        v 
+f  d     f        d
+v  f     f        v   
+v  v     v        v
+v  d     d        v  
+d  f     f        d
+d  v     d        v      
+d  d     d        d
+
+
+Cadeia de Bits -> sequência de zeros(0) e uns (1), pode ser usado para armazenar arquivos e dados binários.
+
+- bit (digito binário)
+
+Intervalo de tempo -> pode ser qualquer intervalo de tempo. Ex: 50h30m59s
+
+
+
+

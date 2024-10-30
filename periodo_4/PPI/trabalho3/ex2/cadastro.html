@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica ABC Health</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>  
+    <main>
+      <section>
+        <header>
+          <h1>Clínica ABC Health</h1>
+        </header>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+      <form action="cadastraCliente.php" method="post">
+        <h2>Cadastro</h2>
+        <fieldset>
+          <legend>DADOS PESSOAIS</legend>
+          <div>
+            <span class="spans">
+              <label for="name">Nome:</label>
+              <input type="text" name="name"  class="inputs" id="name" placeholder="Informe o nome completo" autofocus minlength="3" maxlength="50" required>
+              <span></span>
+            </span>
+            <span class="spans">
+              <label for="email">E-mail:</label>
+              <input type="email" name="email" class="inputs" id="email" placeholder="example@gmail.com" autocomplete="on" required>
+              <span></span>
+            </span>
+          </div>
+          <div>
+            <span class="spans">
+              <label for="cpf">CPF:</label>
+              <input type="text" name="cpf" class="inputs" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx" autocomplete="on" required>
+              <span></span>
+            </span>
+            <span class="spans">
+              <label for="age">Idade:</label>
+              <input type="number" name="age" class="inputs" id="age" placeholder="0" required>
+            </span>
+          </div>
+          <div>
+            <span class="spans">
+              <label for="phone">Telefone:</label>
+              <input type="tel" name="phone" class="inputs" id="phone" maxlength="15" placeholder="(00) 99999-9999" required>
+              <span></span>
+            </span>
+            <span class="spans">
+              <label for="dateOfBirth">Data de Nascimento:</label>
+              <input type="date" name="dateOfBirth" class="inputs" id="dateOfBirth" required>
+            </span>
+          </div>
+          <fieldset class="fieldset_radios">
+            <legend>Escolha o Estado Civil</legend>
+            <div>
+              <input type="radio" name="maritalStatus" class="inputs" id="solteiro" value="solteiro" checked>
+              <label for="solteiro">Solteiro(a)</label>
+              <input type="radio" name="maritalStatus" class="inputs" id="casado" value="casado">
+              <label for="casado">Casado(a)</label>
+            </div>
+            <div>
+              <input type="radio" name="maritalStatus" class="inputs" id="separado" value="separado">
+              <label for="separado">Separado(a)</label>
+              <input type="radio" name="maritalStatus"  class="inputs" id="divorciado" value="divorciado">
+              <label for="divorciado">Divorciado(a)</label>
+            </div>
+          </fieldset>
+          <fieldset class="fieldset_radios">
+            <legend>Sexo</legend>
+            <div>
+              <input type="radio" name="selectSex" class="inputs" id="sexFem" checked>
+              <label for="sexFem">Feminino</label>
+            </div>
+            <div>
+              <input type="radio" name="selectSex" class="inputs" id="sexMasc" checked>
+              <label for="sexMasc">Masculino</label>
+            </div>
+          </fieldset>
+        </fieldset>
+        <fieldset>
+          <legend>ENDEREÇO DE ENTREGA</legend>
+          <div>
+            <label for="cep">CEP: </label>
+            <input type="text" name="cep" class="inputs" id="cep" pattern="\d{5}-\d{3}" placeholder="xxxxx-xxx" required>
+            <span></span>
+          
+            <label for="tipoDeLogradouro">Tipo de logradouro: </label>
+            <select name="tipoDeLogradouro" id="tipoDeLogradouro" class="selects" required>
+              <option value="">Selecione</option>
+              <option value="rua">Rua</option>
+              <option value="praca">Praça</option>
+              <option value="avenida">Avenida</option>
+              <option value="rodovia">Rodovia</option>
+              <option value="condomínio">Condomínio</option>
+              <option value="residencial">Residencial</option>
+            </select>
+            <span></span>
+          </div>
+          <div>
+            <label for="logradouro">Logradouro: </label>
+            <input type="text" name="logradouro" class="inputs" id="logradouro" placeholder="Informe o logradouro" required>
+            <span></span>
+            <label for="bairro">Bairro: </label>
+            <input type="text" name="bairro" class="inputs" id="bairro" placeholder="Informe o bairro" required>
+            <span></span>
+          </div>
+          <div>
+            <label for="cidade">Cidade: </label>
+            <input type="text" name="cidade" class="inputs" id="cidade" placeholder="informe a cidade" required>
+            <span></span>
+            <label for="estados">Estado: </label>
+            <select name="estados" id="estados" class="selects">
+              <option value="">Selecione</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+            <span></span>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>INFORMAÇÕES ADICIONAIS</legend>
+          <fieldset id="fieldset_checkbox">
+            <legend>Interesses</legend>
+            <div>
+              <input type="checkbox" name="interesses[]"  class="inputs" id="filmes" checked>
+              <label for="filmes">filmes</label>
+            
+              <input type="checkbox" name="interesses[]" class="inputs" id="informatica">
+              <label for="informatica">Informática</label>
+            </div>
+            <div>
+              <input type="checkbox" name="interesses[]" class="inputs" id="games">
+              <label for="games">Games</label>
+            
+              <input type="checkbox" name="interesses[]" class="inputs" id="livros">
+              <label for="livros">Livros</label>
+            </div>
+            <div>
+              <input type="checkbox" name="interesses[]" id="roupas">
+              <label for="roupas">Roupas</label>
+            
+              <input type="checkbox" name="interesses[]" class="inputs" id="esportes">
+              <label for="esportes">Esportes</label>
+            </div>
+          </fieldset>
+          <fieldset id="fieldset_textArea">
+            <legend>Informações Complementares</legend>
+            <textarea name="complemento" id="complemento" cols="85" rows="10" placeholder="Digite algo..."></textarea>
+            </fieldset>
+            <div>
+              <label for="arquivo">Selecione um arquivo</label>
+              <input type="file" name="arquivo" id="arquivo" accept=".png, .jpg, .jpeg">
+            </div>
+          </fieldset>
+        <input type="hidden" name="escondido" value="escondido">
+        <button>Enviar</button>
+      </form>
+    </main>
+  </body>
+</html>
+

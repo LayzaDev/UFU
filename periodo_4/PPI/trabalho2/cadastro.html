@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica ABC Health</title>
+  </head>
+  <body>  
+    <header>
+      <h1>Clínica ABC Health</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+    <form action="cadastraCliente.php" method="post">
+      <fieldset>
+        <legend>DADOS PESSOAIS</legend>
+        <div>
+          <label for="name">Nome:</label>
+          <input type="text" name="name" id="name" placeholder="Informe o nome completo" autofocus minlength="2" maxlength="50" required>
+        </div>
+        <div>
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" placeholder="example@gmail.com" autocomplete="on" required>
+        </div>
+        <div>
+          <label for="cpf">CPF:</label>
+          <input type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx" autocomplete="on">
+        </div>
+        <div>
+          <label for="age">Idade:</label>
+          <input type="number" name="age" id="age" placeholder="0" required>
+        </div>
+        <div>
+          <label for="phone">Telefone:</label>
+          <input type="tel" name="phone" id="phone" placeholder="(00) 99999-9999" required>
+        </div>
+        <div>
+          <label for="dateOfBirth">Data de Nascimento:</label>
+          <input type="date" name="dateOfBirth" id="dateOfBirth">
+        </div>
+        <fieldset>
+         <legend>Sexo</legend>
+          <input type="radio" name="definesSex" id="sexFem" checked>
+          <label for="sexFem">Feminino</label>
+        
+          <input type="radio" name="definesSex" id="sexMasc">
+          <label for="sexMasc">Masculino</label>
+        </fieldset>
+        <fieldset>
+          <legend>Escolha o Estado Civil</legend>
+          <div>
+            <input type="radio" name="maritalStatus" id="solteiro" value="solteiro" checked>
+            <label for="solteiro">Solteiro(a)</label>
+          </div>
+          <div>
+            <input type="radio" name="maritalStatus" id="casado" value="casado">
+            <label for="casado">Casado(a)</label>
+          </div>
+          <div>
+            <input type="radio" name="maritalStatus" id="separado" value="separado">
+            <label for="separado">Separado(a)</label>
+          </div>
+          <div>
+            <input type="radio" name="maritalStatus" id="divorciado" value="divorciado">
+            <label for="divorciado">Divorciado(a)</label>
+          </div>
+          <div>
+            <input type="radio" name="maritalStatus" id="viuvo" value="viuvo">
+            <label for="viuvo">Viúvo(a)</label>
+          </div>
+        </fieldset>
+        <div>
+          <textarea name="readOnly" id="readOnly" cols="40" rows="1" readonly>Todas as informações são obrigatórias.</textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>ENDEREÇO DE ENTREGA</legend>
+        <div>
+          <label for="cep">CEP: </label>
+          <input type="text" name="cep" id="cep" pattern="\d{5}-\d{3}" placeholder="xxxxx-xxx" required>
+        </div>
+        <div>
+          <label for="tipoDeLogradouro">Tipo de logradouro: </label>
+          <select name="tipoDeLogradouro" id="tipoDeLogradouro" required>
+            <option value="">Selecione</option>
+            <option value="rua">Rua</option>
+            <option value="praca">Praça</option>
+            <option value="avenida">Avenida</option>
+            <option value="rodovia">Rodovia</option>
+            <option value="condomínio">Condomínio</option>
+            <option value="residencial">Residencial</option>
+          </select>
+        </div>
+        <div>
+          <label for="logradouro">Logradouro: </label>
+          <input type="text" name="logradouro" id="logradouro" placeholder="Informe o logradouro" required>
+        </div>
+        <div>
+          <label for="bairro">Bairro: </label>
+          <input type="text" name="bairro" id="bairro" placeholder="Informe o bairro" required>
+        </div>
+        <div>
+          <label for="cidade">Cidade: </label>
+          <input type="text" name="cidade" id="cidade" placeholder="informe a cidade" required>
+        </div>
+        <div>
+          <label for="estado">Estado: </label>
+          <input type="text" name="estado" id="estado" placeholder="Informe o Estado">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>INFORMAÇÕES ADICIONAIS</legend>
+        <fieldset>
+          <legend>Interesses</legend>
+          <div>
+            <input type="checkbox" name="interesses[]" id="filmes" checked>
+            <label for="filmes">filmes</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interesses[]" id="informatica">
+            <label for="informatica">Informática</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interesses[]" id="games">
+            <label for="games">Games</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interesses[]" id="livros">
+            <label for="livros">Livros</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interesses[]" id="roupas">
+            <label for="roupas">Roupas</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interesses[]" id="esportes">
+            <label for="esportes">Esportes</label>
+          </div>
+        </fieldset>
+        <fieldset>
+        <legend>Informações Complementares</legend>
+        <textarea name="complemento" id="complemento" cols="85" rows="10" placeholder="Digite algo..."></textarea>
+        </fieldset>
+        <div>
+          <label for="arquivo">Selecione um arquivo</label>
+          <input type="file" name="arquivo" id="arquivo" accept=".png, .jpg, .jpeg" >
+        </div>
+      </fieldset>
+      <input type="hidden" name="escondido" value="escondido">
+      <button>Enviar</button>
+    </form>
+  </body>
+</html>

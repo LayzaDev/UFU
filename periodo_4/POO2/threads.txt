@@ -1,0 +1,56 @@
+======================= THREADS  =======================
+
+Threads a nível de usuário (ULTs) -> Todas as operações de gerenciamento de threads são realizadas pela aplicação,  sem intervenção do sistema operacional.
+
+Threads a nível de Kernel (KLTs) -> O SO gerencia diretamente as threads, o que permite um gerenciamento mais eficiente em termos de escalonamento.
+
+Utilidade de uma Thread -> Melhoria de desempenho e responsividade em programas multitarefas.
+
+	Paralelismo -> Realiza várias tarefas simultaneamente, melhorando o desempenho. 
+	
+	Concorrência -> Execução simultanea de tarefas, mas não necessariamente ao mesmo tempo exato.
+	
+	
+Estados de uma multithread (Novo, Executavel, Espera, Espera Sincronizada, Dormindo, Terminado)
+
+	Nova -> Thread foi criada, mas ainda não foi executada.
+
+	Executavel -> Thread pronta para ser executada, mas o S0 ainda não a selecionou paa ser a Thread em execução.
+
+	Espera ->  Thread aguarda outra thread realizar uma tarefa.
+
+	Espera sincronizada ->  Thread aguarda por um tempo específico antes de continuar com sua execução ou ser acordada por outra thread.
+
+	Terminada -> A thread concluiu sua execução ou foi encerrada por algum motivo específico.
+
+Estados de uma Thread (criada, em execução, suspensa, morta)
+
+Métodos
+
+	wait():
+        Objetivo: Usado para fazer uma thread aguardar até que outra thread chame o método notify() ou notifyAll() para acordá-la.
+        Quando usar: Usado em contextos de sincronização, onde uma thread precisa aguardar uma condição específica antes de continuar a execução.
+
+    join():
+        Objetivo: Utilizado para fazer uma thread esperar até que a thread na qual o método é chamado termine sua execução.
+        Quando usar: Útil quando é necessário garantir que uma thread termine antes de continuar com a execução da thread atual.
+
+    sleep():
+        Objetivo: Coloca a thread atual em estado de espera por um período específico de tempo.
+        Quando usar: Pode ser usado para introduzir atrasos ou pausas em uma execução, por exemplo, para aguardar algum evento ou controlar a taxa de produção/consumo de recursos.
+
+    notify():
+        Objetivo: Utilizado para acordar uma única thread que está aguardando no método wait() em um objeto específico.
+        Quando usar: Em conjunto com wait(), é usado para sincronização entre threads, onde uma thread notifica outra que uma condição desejada foi alcançada.
+
+    notifyAll():
+        Objetivo: Acorda todas as threads que estão aguardando no método wait() em um objeto específico.
+        Quando usar: Pode ser útil quando várias threads estão esperando por condições diferentes e todas devem ser notificadas quando uma condição relevante é atingida.
+		
+Prioridades de Thread
+
+	MIN_PRIORITY (constante 1 ) -> Valor mais baixo
+	MAX_PRIORITY (constante 10) -> Valor mais alto
+	NORM_PRIORITY (constante 5) -> Valor normal 
+	
+Scheduler de thread -> Determinar a próxima thread que entra em execução.
